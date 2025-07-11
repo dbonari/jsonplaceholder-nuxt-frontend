@@ -12,7 +12,7 @@
           width="26px"
           fluid
           class=" img-thumbnail"
-          src="https://nuxtjs.org/logos/nuxt-icon.png"
+          src="https://nuxt.com/assets/design-kit/logo/icon-green.svg"
         ></b-img>
 
         Frontend</b-navbar-brand

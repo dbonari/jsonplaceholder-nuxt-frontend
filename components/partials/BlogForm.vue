@@ -154,7 +154,7 @@ export default {
         this.addLoading = true
         await this.$axios
           .$post(
-            `${process.env.BACKEND_POSTS_ENDPOINT}`,
+            `${process.env.BACKEND_ENDPOINT}/posts`,
             this.blogDetails,
             config
           )

@@ -374,7 +374,7 @@ export default {
         this.addLoading = true
         await this.$axios
           .$post(
-            `${process.env.BACKEND_USERS_ENDPOINT}`,
+            `${process.env.BACKEND_ENDPOINT}/users`,
             this.userDetails,
             config
           )
@@ -402,8 +402,8 @@ export default {
       try {
         this.addLoading = true
         await this.$axios
-          .$post(
-            `${process.env.BACKEND_USERS_ENDPOINT}/${this.userDetails.id}`,
+          .$put(
+            `${process.env.BACKEND_ENDPOINT}/users/${this.userDetails.id}`,
             this.userDetails,
             config
           )

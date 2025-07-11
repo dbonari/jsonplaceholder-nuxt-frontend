@@ -3,7 +3,7 @@
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">
       © 2020 Copyright:
-      <a href="https://neniemsu.com/"> NeniEmsu</a>
+      <a href="https://neniemsu.com/"> NeniEmsu</a> + <a href="https://github.com/dbonari">dbonari</a>
     </div>
     <!-- Copyright -->
   </footer>

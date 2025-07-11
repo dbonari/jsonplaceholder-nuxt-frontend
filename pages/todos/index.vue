@@ -59,6 +59,7 @@
             :header="`By: ${users[todo.userId - 1].username}`"
             class=""
             @dblclick="setToCompleted(todo)"
+            :data-testid="todo.id"
           >
             <b-form-group
               v-if="updating.value === true && updating.number === index"
@@ -146,7 +147,7 @@ export default {
     },
 
     selectTodoToUpdate(specificTodo) {
-      const index = this.todos.todos.findIndex(
+      const index = this.todos.findIndex(
         (todo) => todo.id === specificTodo.id
       )
       this.title = specificTodo.title

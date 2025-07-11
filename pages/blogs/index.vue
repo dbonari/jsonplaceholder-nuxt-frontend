@@ -54,7 +54,7 @@
               </b-form-group>
             </div>
 
-            <div v-for="blog in filteredData" :key="blog.id">
+            <div v-for="blog in filteredData" :key="blog.id" :data-testid="blog.id">
               <b-media class="my-2" right-align vertical-align="center">
                 <template v-slot:aside>
                   <b-img
@@ -193,7 +193,7 @@ export default {
       this.blogsLoading = true
       try {
         const data = await this.$axios.$get(
-          `${process.env.BACKEND_POSTS_ENDPOINT}`,
+          `${process.env.BACKEND_ENDPOINT}/posts`,
           config
         )
         const response = await data

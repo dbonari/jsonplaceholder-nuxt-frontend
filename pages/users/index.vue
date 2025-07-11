@@ -51,6 +51,7 @@
               :sort-desc.sync="sortDesc"
               sticky-header="600px"
               :items="items"
+              primary-key="id"
             >
               <template v-slot:thead-top="">
                 <b-tr>
@@ -298,7 +299,7 @@ export default {
     },
 
     callGetUsers() {
-      this.getAllUsers()
+        this.$store.dispatch('users/getAllUsers')
       this.addState = false
     },
 
@@ -324,10 +325,10 @@ export default {
       }).then((willDelete) => {
         if (willDelete.value) {
           this.$axios
-            .$delete(`${process.env.BACKEND_USERS_ENDPOINT}/${id}`, config)
+            .$delete(`${process.env.BACKEND_ENDPOINT}/users/${id}`, config)
             .then((response) => {
               this.deleteLoading = false
-              this.getAllUsers()
+              this.$store.dispatch('users/getAllUsers')
               this.$swal({
                 text: "Poof! You've sucessfully deleted that user!",
                 icon: 'success'
